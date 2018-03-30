@@ -4,7 +4,7 @@
   "description": "A phaser boilerplate with es6 and webpack",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/jest/bin/jest --coverage",
+    "test": "./node_modules/jest/bin/jest.js --coverage",
     "build": "./node_modules/webpack/bin/webpack.js --config webpack.prod.js",
     "start": "./node_modules/webpack-serve/cli.js --open --config webpack.dev.js --port 3000 --mode develop",
     "lint": "./node_modules/eslint/bin/eslint.js src",
