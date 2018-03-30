@@ -1,0 +1,56 @@
+{
+  "name": "phaser-js-starter",
+  "version": "0.0.1",
+  "description": "A phaser boilerplate with es6 and webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/jest/bin/jest --coverage",
+    "build": "./node_modules/webpack/bin/webpack.js --config webpack.prod.js",
+    "start": "./node_modules/webpack-serve/cli.js --open --config webpack.dev.js --port 3000 --mode develop",
+    "lint": "./node_modules/eslint/bin/eslint.js src",
+    "prettier": "./node_modules/prettier/bin-prettier.js src/**/*.js --write",
+    "flow": "./node_modules/flow-bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalbar/phaser-js-starter.git"
+  },
+  "keywords": [
+    "phaser",
+    "es6",
+    "webpack3",
+    "flow",
+    "jest",
+    "boilerplate"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dalbar/phaser-js-starter/issues"
+  },
+  "homepage": "https://github.com/dalbar/phaser-js-starter#readme",
+  "dependencies": {
+    "phaser": "^3.3.0",
+    "uninstall": "0.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.10.0",
+    "flow-bin": "^0.69.0",
+    "html-webpack-plugin": "^3.1.0",
+    "jest": "^22.4.3",
+    "npm": "^5.8.0",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-merge": "^4.1.2",
+    "webpack-serve": "^0.3.0"
+  }
+}
