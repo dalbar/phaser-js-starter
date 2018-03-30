@@ -1,6 +1,12 @@
 const path = require("path");
+const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const WEBGL = new webpack.DefinePlugin({
+  WEBGL_RENDERER: true,
+  CANVAS_RENDERER: true
+});
 
 module.exports = {
   entry: "./src/index.js",
@@ -16,13 +22,15 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      }
+      },
+      { test: [/\.vert$/, /\.frag$/], use: "raw-loader" }
     ]
   },
   plugins: [
     new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
+    }),
+    WEBGL
   ]
 };
