@@ -1,11 +1,13 @@
-import "phaser";
+import Phaser from "phaser";
 
-const config = {
-  type: Phaser.WEBGL,
-  parent: "game",
-  width: 400,
-  height: 240,
-  scaleMode: 0
-};
+class MyGame extends Phaser.Game {
+  constructor() {
+    super(
+      window.innerWidth * window.devicePixelRatio,
+      window.innerHeight * window.devicePixelRatio,
+      Phaser.AUTO
+    );
+  }
+}
 
-const game = new Phaser.Game(config);
+new MyGame();
